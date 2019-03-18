@@ -18,8 +18,11 @@ let product = {
 }
 
 // code here
+let product = {'id','name','price','imageUrl'};
 
+let newProduct = {...product}
 
+console.log(newProduct);
 
 
 ////////// PROBLEM 2 //////////
@@ -28,7 +31,8 @@ let product = {
 
 let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-// code here
+let colorsCopy = [...colors];
+// code here1
 
 
 
