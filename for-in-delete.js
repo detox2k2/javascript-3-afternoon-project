@@ -11,25 +11,25 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// for(var key in values) {
-//   console.log(key)
-// }
+for(var key in values) {
+  console.log(key)
+}
 
 
 
@@ -40,7 +40,12 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  console.log(obj)
+  var showValues = ""
+  for (var key in obj) {
+showValues = showValues + obj[key]
+  }
+  return showValues;
 }
 
 
@@ -54,7 +59,24 @@ function showValues( obj ) {
 */
 
 //Code Here
+var lower = {
+  one: 20,
+  two: 12,
+  three: 6,
+  four: 5
+}
 
+
+
+function greaterThan10(obj){
+for (var key in obj){
+  if (obj[key] > 10) {
+     obj[key] = 0
+  }
+}
+return obj
+}
+greaterThan10(lower)
 
 
 ////////// PROBLEM 3 //////////
