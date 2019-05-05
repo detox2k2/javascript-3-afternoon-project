@@ -39,16 +39,18 @@ for(var key in values) {
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  console.log(obj)
-  var showValues = ""
-  for (var key in obj) {
-showValues = showValues + obj[key]
+function showValues (values) {
+  var string = '';
+  for (var key in values){
+    string += values[key]
   }
-  return showValues;
+  return string
 }
-
-
+// function showValues () {
+//   for(var key in values) {
+//     return values[key]
+//   }
+// }
 
 ////////// PROBLEM 2 //////////
 
@@ -68,15 +70,14 @@ var lower = {
 
 
 
-function greaterThan10(obj){
-for (var key in obj){
-  if (obj[key] > 10) {
-     obj[key] = 0
+function greaterThan10 (lower) {
+for( var key in lower) {
+  if (lower[key] > 10) {
+    lower[key] = 0;
   }
 }
-return obj
+return lower
 }
-greaterThan10(lower)
 
 
 ////////// PROBLEM 3 //////////
@@ -88,7 +89,12 @@ greaterThan10(lower)
 */
 
 //Code Here
-
+//  function double (object){
+//    for( var key in object){
+//      if (object[key] * 2)
+//   }
+//   return object
+//  }
 
 
 ////////// PROBLEM 4 //////////

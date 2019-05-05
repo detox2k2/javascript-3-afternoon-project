@@ -22,10 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-var  color = carDetails.color;
-var make =carDetails.make;
-var model= carDetails.model;
-var year= carDetails.year
+var {color,make,model,year} = carDetails;
 
 
 
@@ -37,13 +34,15 @@ var year= carDetails.year
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
-  //Code Here
-  let {firstName, lastName, title} = obj
+  // Code Here
+  function greeting( obj ) {
+    var {firstName, lastName, title} = obj;
+    return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+  }
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+
   // Do not edit the code above.
-}
+
 
 
 
@@ -58,12 +57,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-function totalPopulation( obj ) {
 
+function totalPopulation (object) {
+var {utah,california,texas,arizona}= object;
+var newObject = utah+california+texas+arizona;
+return newObject
 }
-
-
-
 ////////// PROBLEM 4 //////////
 
 /*
@@ -75,7 +74,12 @@ function totalPopulation( obj ) {
 */
 
 //Code Here
-
+function ingredients (food) {
+var arr = [];
+var {carb,fat, protein} = food;
+arr.push(carb,fat,protein);
+return arr
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -93,7 +97,17 @@ function totalPopulation( obj ) {
 */
 
 //Code Here
-
+function largeNumbers ( { first, second, third }) {
+  if (third < second &&  third < first){
+    return third
+  }
+   else if ( second < third && second < first) {
+     return second
+    }
+  else if ( first < second && first < third) {
+    return first
+  }
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -105,5 +119,13 @@ function totalPopulation( obj ) {
 */
 
 //Code Here
-
-
+function numberGroups ({a,b,c}) {
+  let arr = [a,b,c];
+  let longest = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i].length > arr[longest].length) {
+      longest = i
+    }
+  }
+  return arr[longest];
+}

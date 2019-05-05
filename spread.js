@@ -20,7 +20,7 @@ let product = {
 // code here
 
 
-let productCopy = {...product}
+let productCopy = [...product]
 
 
 
@@ -48,8 +48,7 @@ function addNums(num1, num2, num3) {
 }
 
 // code here
-let result = addNums(...numbers)
-
+let nums= addNums(...numbers);
 ////////// PROBLEM 4 //////////
 
 /* Using the spread operator, concatentate the two arrays below and save it to a variable named "combinedArrays" */
@@ -58,4 +57,4 @@ let arr1 = ['dog', 'chameleon', 'monkey'];
 let arr2 = ['bear', 'tiger', 'liger'];
 
 // code here
-let combinedArrays = [...arr1,...arr2]
+let combinedArrays = [...arr1 + arr2]
